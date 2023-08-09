@@ -19,6 +19,12 @@
   }
 }
 
+#animation-screen-3d {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .screen__wrapper {
   @include container;
   position: relative;
@@ -300,19 +306,9 @@
   }
 }
 
-// .screen--story {
-//   background-color: $c-dark;
-//   background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"), url("../img/slide3.jpg"),
-//     url("../img/slide4.jpg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
+.screen--story {
 
-//   @media (orientation: portrait) {
-//     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
-//     background-position: top center, bottom center;
-//   }
-// }
+}
 
 .screen--prizes {
   background-color: $c-dark;
