@@ -1,9 +1,7 @@
 import * as THREE from "three";
 import {SVG_ELEMENTS, OBJECT_ELEMENTS, MATERIAL_TYPE} from "../../helpers/constants";
 import {MaterialCreator} from "./material-creator";
-// import {TransformationGuiHelper} from "../../helpers/transformation-gui-helper";
 import {Saturn} from "./3d-objects/saturn";
-// import {degreesToRadians} from "../../helpers/utils";
 
 export class MainPageComposition extends THREE.Group {
   constructor(pageSceneCreator) {

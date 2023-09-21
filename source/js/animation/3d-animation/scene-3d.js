@@ -33,7 +33,7 @@ export class Scene3d {
     this.camera = new THREE.PerspectiveCamera(
         cameraConfig.fov || 75,
         cameraConfig.aspect || window.innerWidth / window.innerHeight,
-        cameraConfig.near || 0.1,
+        cameraConfig.near || 10,
         cameraConfig.far || 1000
     );
 
@@ -47,7 +47,7 @@ export class Scene3d {
     });
 
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setClearColor(0x5f458c, 0);
+    this.renderer.setClearColor(0x5f458c, 1);
     this.renderer.setPixelRatio(window.devicePixelRatio);
   }
 
@@ -56,11 +56,14 @@ export class Scene3d {
 
     const light1 = new THREE.DirectionalLight(
         new THREE.Color(`rgb(255,255,255)`),
-        0.84
+        1.84
     );
 
-    const targetObject = new THREE.Object3D().translateY(
-        this.camera.position.z * Math.tan((15 * Math.PI) / 180)
+    const targetObject = new THREE.Object3D();
+    targetObject.position.set(
+        0,
+        this.camera.position.z * Math.tan((15 * Math.PI) / 180),
+        0
     );
 
     this.scene.add(targetObject);
@@ -85,7 +88,7 @@ export class Scene3d {
 
     light3.position.set(730, 800, -985);
 
-    const light4 = new THREE.AmbientLight(0x404040);
+    const light4 = new THREE.AmbientLight(0xf9f9f9);
 
     this.light.add(light1, light2, light3, light4);
 

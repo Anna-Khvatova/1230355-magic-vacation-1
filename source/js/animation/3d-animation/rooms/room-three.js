@@ -88,7 +88,7 @@ export class RoomThreeScene extends RoomScene {
 
         const transform = {
           transformX: radius * Math.cos(angle),
-          transformY: 50,
+          transformY: 40,
           transformZ: radius * Math.sin(angle),
         };
 

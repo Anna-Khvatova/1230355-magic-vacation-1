@@ -42,7 +42,7 @@ export const sceneController = {
 
   addRoomsPageComposition() {
     const positionZ = 2550;
-    const positionY = 800;
+    const positionY = 700;
 
     scene.camera.position.set(0, positionY, positionZ);
 

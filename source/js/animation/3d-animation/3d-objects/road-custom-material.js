@@ -33,7 +33,7 @@ export class RoadCustomMaterial extends THREE.MeshStandardMaterial {
 
     shader.fragmentShader = shader.fragmentShader.replace(
         `#include <map_fragment>`,
-        `float strength = step(0.86, mod(vUv.y + 0.4, 1.0));
+        `float strength = step(0.96, mod(vUv.y + 0.6, 1.0));
       strength *= step(0.6, mod(vUv.x * 4.0 + 0.4, 1.0));
       vec3 color = strength < 0.5 ? roadColor : stripesColor;
       diffuseColor = vec4(color, vUv);`
